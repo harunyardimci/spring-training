@@ -1,5 +1,7 @@
 package com.gg.petclinic.dao;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
@@ -11,6 +13,7 @@ import com.gg.petclinic.model.Vet;
 import com.gg.petclinic.model.Visit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 @Repository("petClinicDao")
@@ -33,10 +36,23 @@ public class PetClinicDaoJdbcImpl implements PetClinicDao {
 
 	@Override
 	public Collection<Vet> getVets() {
-        Vet vet = new Vet();
-        vet.setFirstName("Harun");
-        vet.setLastName("Yardimci");
-		return Arrays.asList(vet);
+
+        System.out.println("called pcdao");
+        return jdbcTemplate
+                .query("select p.first_name, p.last_name, p.id from persons p, vets v where v.id = p.id",
+                        new RowMapper<Vet>() {
+
+                            @Override
+                            public Vet mapRow(ResultSet resultSet, int i) throws SQLException {
+                                Vet vet = new Vet();
+                                vet.setId(resultSet.getLong("id"));
+                                vet.setFirstName(resultSet.getString("first_name"));
+                                vet.setLastName(resultSet.getString("last_name"));
+                                return vet;
+                            }
+                        }
+
+                );
 	}
 
 	@Override
