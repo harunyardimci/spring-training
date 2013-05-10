@@ -32,8 +32,9 @@ public class SpringTest {
 
         Collection<Vet> vets = petClinicService.getVets();
 
+        System.out.println("testGetVets ->");
         for (Vet vet: vets) {
-            System.out.println(vet);
+            System.out.println("Vet: " + vet);
         }
     }
 
