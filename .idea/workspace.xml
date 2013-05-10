@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32763ab7-e309-49cf-9abf-c5f02fd32bba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/gg/petclinic/tests/SpringTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/gg/petclinic/tests/SpringTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/appcontext/beans-service.xml" afterPath="$PROJECT_DIR$/src/main/resources/appcontext/beans-service.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="petclinic-spring.iws" />
@@ -16,7 +13,7 @@
     <file path="/fragment.java" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368087911948" ignored="false" />
     <file path="/bean-dao.xml" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368090112974" ignored="false" />
     <file path="/bean-service.xml" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368090171720" ignored="false" />
-    <file path="/SpringTest.java" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368172054894" ignored="false" />
+    <file path="/SpringTest.java" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368172327953" ignored="false" />
     <file path="/beans-service.xml" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368106126912" ignored="false" />
     <file path="/PetClinicServiceImpl.java" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368169430024" ignored="false" />
     <file path="/beans-dao.xml" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368106420596" ignored="false" />
@@ -27,7 +24,7 @@
     <file path="/EntitySaveEvent.java" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368169246232" ignored="false" />
     <file path="/PetClinicSaveEventHandler.java" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368169605731" ignored="false" />
     <file path="/a.dummy" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368169746713" ignored="false" />
-    <file path="/Dummy.txt" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368172187618" ignored="false" />
+    <file path="/Dummy.txt" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368172224542" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +88,7 @@
       <file leaf-file-name="SpringTest.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/gg/petclinic/tests/SpringTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="55" selection-start="729" selection-end="818" vertical-scroll-proportion="0.08805031">
+            <state line="27" column="71" selection-start="876" selection-end="876" vertical-scroll-proportion="0.44444445">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -758,6 +755,11 @@
       <created>1368086642953</created>
       <updated>1368086642953</updated>
     </task>
+    <task id="LOCAL-00001" summary="RunWith(SpringJUnit4ClassRunner.class), ContextConfiguration">
+      <created>1368172236113</created>
+      <updated>1368172236113</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -805,7 +807,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32961586" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2496902" sideWeight="0.63309354" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36690646" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36690646" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -855,7 +857,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <option name="LAST_COMMIT_MESSAGE" value="RunWith(SpringJUnit4ClassRunner.class), ContextConfiguration" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -869,6 +871,7 @@
     <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="RunWith(SpringJUnit4ClassRunner.class), ContextConfiguration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -991,7 +994,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/gg/petclinic/tests/SpringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="55" selection-start="729" selection-end="818" vertical-scroll-proportion="0.08805031">
+        <state line="27" column="71" selection-start="876" selection-end="876" vertical-scroll-proportion="0.44444445">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
