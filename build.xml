@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project name="petclinic" basedir="." default="hsqldb.run.server">
 	
-	<property name="M2_HOME" location="/home/ksevindik"/>
+	<property name="M2_HOME" location="/Users/hyardimci"/>
 
 	<path id="build.classpath">
 		<fileset dir="${M2_HOME}/.m2/repository/org/hsqldb/hsqldb/2.2.9">

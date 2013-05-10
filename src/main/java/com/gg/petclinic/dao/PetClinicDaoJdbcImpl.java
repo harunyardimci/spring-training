@@ -9,10 +9,23 @@ import com.gg.petclinic.model.Person;
 import com.gg.petclinic.model.Pet;
 import com.gg.petclinic.model.Vet;
 import com.gg.petclinic.model.Visit;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 @Repository("petClinicDao")
 public class PetClinicDaoJdbcImpl implements PetClinicDao {
+
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+
+    public JdbcTemplate getJdbcTemplate() {
+        return jdbcTemplate;
+    }
+
+    public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+        this.jdbcTemplate = jdbcTemplate;
+    }
 
     public PetClinicDaoJdbcImpl() {
         System.out.println("pcdao created");

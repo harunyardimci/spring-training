@@ -1,6 +1,8 @@
 package com.gg.petclinic.tests;
 
 import com.gg.petclinic.model.Vet;
+import com.gg.petclinic.service.PetClinicService;
+import com.gg.petclinic.service.PetClinicServiceImpl;
 import org.junit.Test;
 import org.springframework.expression.Expression;
 import org.springframework.expression.ExpressionParser;
@@ -22,6 +24,9 @@ public class SpelTests {
 
         System.out.println("before :" + vet);
 
+
+        new Vet();
+
         ExpressionParser parser = new SpelExpressionParser();
         Expression expression = parser.parseExpression("firstName");
 
@@ -29,6 +34,16 @@ public class SpelTests {
 
         String firstName = (String) expression.getValue(context);
 
+        Expression expression2 = parser.parseExpression("lastName");
+
+        expression2.setValue(context, "ohoyhohoy");
+
+
+
         System.out.println(firstName);
+        System.out.println("after :" + vet);
+
+        Expression expression3 = parser.parseExpression("new com.gg.petclinic.model.Vet()");
+        System.out.println("new Vet : " + expression3.getValue());
     }
 }
