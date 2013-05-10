@@ -24,9 +24,6 @@ public class SpelTests {
 
         System.out.println("before :" + vet);
 
-
-        new Vet();
-
         ExpressionParser parser = new SpelExpressionParser();
         Expression expression = parser.parseExpression("firstName");
 

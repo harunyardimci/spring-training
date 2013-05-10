@@ -16,7 +16,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-@Repository("petClinicDao")
+@Repository
 public class PetClinicDaoJdbcImpl implements PetClinicDao {
 
     @Autowired
