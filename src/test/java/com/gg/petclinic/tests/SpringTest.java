@@ -5,7 +5,12 @@ import com.gg.petclinic.service.PetClinicService;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.Collection;
 
@@ -15,25 +20,31 @@ import java.util.Collection;
  * Date: 5/9/13
  * Time: 11:48 AM
  */
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration({"/appcontext/beans-*.xml"})
 public class SpringTest {
 
-    private ClassPathXmlApplicationContext applicationContext;
+    //private ClassPathXmlApplicationContext applicationContext;
+
+    //@Qualifier("petClinicService")
+    @Autowired
     private PetClinicService petClinicService;
 
-    @Before
-    public void setUp() {
-        //applicationContext = new ClassPathXmlApplicationContext("/appcontext/beans-dao.xml", "/appcontext/beans-service.xml", "/appcontext/beans-config.xml");
-        applicationContext = new ClassPathXmlApplicationContext("classpath*:/appcontext/beans-*.xml");
-        applicationContext.registerShutdownHook();
-
-        System.out.println("application context created");
-        petClinicService = applicationContext.getBean("petClinicService", PetClinicService.class);
-    }
-
-    @After
-    public void destroy() {
-
-    }
+//    @Before
+//    public void setUp() {
+//        //applicationContext = new ClassPathXmlApplicationContext("/appcontext/beans-dao.xml", "/appcontext/beans-service.xml", "/appcontext/beans-config.xml");
+//        applicationContext = new ClassPathXmlApplicationContext("classpath*:/appcontext/beans-*.xml");
+//        applicationContext.registerShutdownHook();
+//
+//        System.out.println("application context created");
+//        petClinicService = applicationContext.getBean("petClinicService", PetClinicService.class);
+//    }
+//
+//    @After
+//    public void destroy() {
+//
+//    }
 
     @Test
     public void testGetVets() {
