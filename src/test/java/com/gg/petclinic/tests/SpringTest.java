@@ -2,13 +2,11 @@ package com.gg.petclinic.tests;
 
 import com.gg.petclinic.model.Vet;
 import com.gg.petclinic.service.PetClinicService;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.ApplicationContext;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.util.Collection;
@@ -22,14 +20,12 @@ import java.util.Collection;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({"/appcontext/beans-*.xml"})
+@DirtiesContext //applicationContext bastan yaratilir..
 public class SpringTest {
 
     //@Qualifier("petClinicService")
     @Autowired
     private PetClinicService petClinicService;
-
-    @Autowired
-    private ApplicationContext applicationContext;
 
     @Test
     public void testGetVets() {
@@ -42,6 +38,7 @@ public class SpringTest {
     }
 
     @Test
+    @DirtiesContext //Bu methoddan sonra application Context bastan yaratilir
     public void testSaveVet() {
 
         Vet vet = new Vet();
