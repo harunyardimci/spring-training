@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="petclinic" basedir="." default="hsqldb.run.server">
+	
+	<property name="M2_HOME" location="/home/ksevindik"/>
+
+	<path id="build.classpath">
+		<fileset dir="${M2_HOME}/.m2/repository/org/hsqldb/hsqldb/2.2.9">
+			<include name="*.jar" />
+		</fileset>
+	</path>
+	
+	<target name="hsqldb.run.server" description="Start HSQLDB Server">
+		<java classname="org.hsqldb.Server" fork="yes" classpathref="build.classpath" failonerror="true">
+		</java>
+	</target>
+
+	<target name="hsqldb.run.dbmanager" description="Start HSQLDB Manager">
+		<java classname="org.hsqldb.util.DatabaseManagerSwing" fork="yes" classpathref="build.classpath" failonerror="true">
+			<arg value="-url" />
+			<arg value="jdbc:hsqldb:hsql://localhost" />
+			<arg value="-driver" />
+			<arg value="org.hsqldb.jdbcDriver" />
+		</java>
+	</target>
+</project>
