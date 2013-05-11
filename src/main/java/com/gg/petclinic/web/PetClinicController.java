@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * User: { "id": "hyardimci", "email":nosqlsolutions@gmail.com"}
@@ -18,6 +19,7 @@ public class PetClinicController {
     private PetClinicService petClinicService;
 
     @RequestMapping("/vets")
+    @ResponseBody
     public String getVets() {
 
         return StringUtils.collectionToCommaDelimitedString(petClinicService.getVets());
