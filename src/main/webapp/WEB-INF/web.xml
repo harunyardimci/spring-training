@@ -10,6 +10,16 @@
         <param-value>classpath*:/appcontext/beans-*.xml</param-value>
     </context-param>
 
+    <filter>
+        <filter-name>OSIVF</filter-name>
+        <filter-class>org.springframework.orm.hibernate4.support.OpenSessionInViewFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>OSIVF</filter-name>
+        <servlet-name>testservlet</servlet-name>
+    </filter-mapping>
+
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>

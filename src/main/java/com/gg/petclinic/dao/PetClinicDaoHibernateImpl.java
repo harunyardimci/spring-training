@@ -43,32 +43,32 @@ public class PetClinicDaoHibernateImpl implements PetClinicDao {
 
     @Override
     public Collection<Visit> findVisits(long petId) {
-        return null;
+        return sessionFactory.getCurrentSession().createQuery("from Visit v where v.pet.id = ?").setParameter(0, petId).list();
     }
 
     @Override
     public Collection<Person> findAllPersons() {
-        return null;
+        return sessionFactory.getCurrentSession().createQuery("from Person").list();
     }
 
     @Override
     public Owner loadOwner(long id) {
-        return null;
+        return (Owner) sessionFactory.getCurrentSession().get(Owner.class, id);
     }
 
     @Override
     public Pet loadPet(long id) {
-        return null;
+        return (Pet) sessionFactory.getCurrentSession().createQuery("from Pet p where p.id = ?").setParameter(0, id).uniqueResult();
     }
 
     @Override
     public Vet loadVet(long id) {
-        return null;
+        return (Vet) sessionFactory.getCurrentSession().get(Vet.class, id);
     }
 
     @Override
     public void saveOwner(Owner owner) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        sessionFactory.getCurrentSession().saveOrUpdate(owner);
     }
 
     @Override
@@ -78,7 +78,10 @@ public class PetClinicDaoHibernateImpl implements PetClinicDao {
 
     @Override
     public void deleteOwner(long ownerId) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        Owner owner = new Owner();
+        owner.setId(ownerId);
+
+        sessionFactory.getCurrentSession().delete(owner);
     }
 
     public SessionFactory getSessionFactory() {
