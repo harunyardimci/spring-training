@@ -17,7 +17,8 @@ public class Vet extends Person {
 		System.out.println("vet created");
 	}
 
-	@ManyToMany(fetch = FetchType.EAGER)
+//	@ManyToMany(fetch = FetchType.EAGER) // "v left join fetch v.specialities" ile yazinca gerek olmadi
+    @ManyToMany
 	@JoinTable(name="vet_specialties",joinColumns={@JoinColumn(name="vets_id")},inverseJoinColumns={@JoinColumn(name="specialties_id")})
 	private Set<Specialty> specialties = new HashSet<Specialty>();
 
