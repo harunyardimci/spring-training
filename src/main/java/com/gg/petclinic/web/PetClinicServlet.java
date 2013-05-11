@@ -34,7 +34,7 @@ public class PetClinicServlet extends HttpServlet {
 
             PetClinicService petClinicService = applicationContext.getBean(PetClinicService.class);
             Collection<Vet> vets = petClinicService.getVets();
-            response.getWriter().write(StringUtils.collectionToCommaDelimitedString(vets));
+            response.getWriter().write("<h1>Vets</h1>" + StringUtils.collectionToDelimitedString(vets,"<br/>"));
 
         } else {
             response.getWriter().write("unknown action :" + action);
