@@ -7,7 +7,7 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:appcontext/beans-*.xml</param-value>
+        <param-value>classpath*:/appcontext/beans-*.xml</param-value>
     </context-param>
 
     <listener>
@@ -16,5 +16,15 @@
     <listener>
         <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
     </listener>
+
+    <servlet>
+        <servlet-name>PetClinicServlet</servlet-name>
+        <servlet-class>com.gg.petclinic.web.PetClinicServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PetClinicServlet</servlet-name>
+        <url-pattern>/PetClinicServlet</url-pattern>
+    </servlet-mapping>
 
 </web-app>

@@ -27,7 +27,8 @@ public class PetClinicDaoHibernateImpl implements PetClinicDao {
     public Collection<Vet> getVets() {
         Session session = sessionFactory.openSession();
         try {
-            Query query = session.createQuery("select distinct v from Vet v left join fetch v.specialties");
+            String strQuery = new String("select distinct v from Vet v left join fetch v.specialties");
+            Query query = session.createQuery(strQuery);
             return query.list();
         } finally {
             session.close();
