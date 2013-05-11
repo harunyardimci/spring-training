@@ -18,9 +18,19 @@
     </listener>
 
     <servlet>
+        <servlet-name>testservlet</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    </servlet>
+
+    <servlet>
         <servlet-name>PetClinicServlet</servlet-name>
         <servlet-class>com.gg.petclinic.web.PetClinicServlet</servlet-class>
     </servlet>
+
+    <servlet-mapping>
+        <servlet-name>testservlet</servlet-name>
+        <url-pattern>/mvc/*</url-pattern>
+    </servlet-mapping>
 
     <servlet-mapping>
         <servlet-name>PetClinicServlet</servlet-name>

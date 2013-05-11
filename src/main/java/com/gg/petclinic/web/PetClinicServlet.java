@@ -39,6 +39,5 @@ public class PetClinicServlet extends HttpServlet {
         } else {
             response.getWriter().write("unknown action :" + action);
         }
-
     }
 }
