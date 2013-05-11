@@ -17,7 +17,11 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.TransactionStatus;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionCallbackWithoutResult;
+import org.springframework.transaction.support.TransactionTemplate;
 
 
 @Service("petClinicService")
@@ -26,6 +30,10 @@ public class PetClinicServiceImpl implements PetClinicService, InitializingBean,
 	
 	private PetClinicDao petClinicDao;
     private ApplicationContext applicationContext;
+
+
+    @Autowired
+    private PlatformTransactionManager transactionManager;
 
 //    public PetClinicServiceImpl() {
 //    }
@@ -73,11 +81,17 @@ public class PetClinicServiceImpl implements PetClinicService, InitializingBean,
 		return owner.getId();
 	}
 
-	public void saveVet(Vet vet) {
-		petClinicDao.saveVet(vet);
-        EntitySaveEvent saveEvent = new EntitySaveEvent(this);
-        saveEvent.setEntity(vet);
-        applicationContext.publishEvent(saveEvent);
+	public void saveVet(final Vet vet) {
+        TransactionTemplate template = new TransactionTemplate(transactionManager);
+        template.execute(new TransactionCallbackWithoutResult() {
+            @Override
+            protected void doInTransactionWithoutResult(TransactionStatus transactionStatus) {
+                petClinicDao.saveVet(vet);
+                EntitySaveEvent saveEvent = new EntitySaveEvent(this);
+                saveEvent.setEntity(vet);
+                applicationContext.publishEvent(saveEvent);
+            }
+        });
 	}
 
 	public void deleteOwner(long ownerId) {

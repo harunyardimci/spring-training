@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32763ab7-e309-49cf-9abf-c5f02fd32bba" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gg/petclinic/dao/PetClinicDaoHibernateImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/gg/petclinic/dao/PetClinicDaoHibernateImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/gg/petclinic/service/PetClinicServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/gg/petclinic/service/PetClinicServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/gg/petclinic/tests/SpringTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/gg/petclinic/tests/SpringTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/appcontext/beans-service.xml" afterPath="$PROJECT_DIR$/src/main/resources/appcontext/beans-service.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="petclinic-spring.iws" />
@@ -17,7 +16,7 @@
     <file path="/bean-service.xml" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368090171720" ignored="false" />
     <file path="/SpringTest.java" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368257225405" ignored="false" />
     <file path="/beans-service.xml" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368256283437" ignored="false" />
-    <file path="/PetClinicServiceImpl.java" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368256758577" ignored="false" />
+    <file path="/PetClinicServiceImpl.java" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368257829648" ignored="false" />
     <file path="/beans-dao.xml" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368256359162" ignored="false" />
     <file path="/PetClinicServiceFactoryBean.java" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368099375878" ignored="false" />
     <file path="/beans.xml" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368106619478" ignored="false" />
@@ -26,7 +25,7 @@
     <file path="/EntitySaveEvent.java" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368169246232" ignored="false" />
     <file path="/PetClinicSaveEventHandler.java" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368169605731" ignored="false" />
     <file path="/a.dummy" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368169746713" ignored="false" />
-    <file path="/Dummy.txt" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368256494595" ignored="false" />
+    <file path="/Dummy.txt" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368257248850" ignored="false" />
     <file path="/SpelTests.java" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368183769560" ignored="false" />
     <file path="/PetClinicDaoHibernateImpl.java" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368256980051" ignored="false" />
     <file path="/Vet.java" changelist="32763ab7-e309-49cf-9abf-c5f02fd32bba" time="1368191009885" ignored="false" />
@@ -111,10 +110,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SpringTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SpringTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/gg/petclinic/tests/SpringTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="139" selection-start="1653" selection-end="1653" vertical-scroll-proportion="0.8427673">
+            <state line="39" column="53" selection-start="1280" selection-end="1280" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -171,24 +170,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PetClinicDaoJdbcImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gg/petclinic/dao/PetClinicDaoJdbcImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="71" selection-start="836" selection-end="836" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1224#1770#0" expanded="true" />
-                <element signature="e#1743#1744#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PetClinicServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PetClinicServiceImpl.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/gg/petclinic/service/PetClinicServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="14" selection-start="899" selection-end="899" vertical-scroll-proportion="0.0">
+            <state line="93" column="11" selection-start="3023" selection-end="3023" vertical-scroll-proportion="0.6551724">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2624#3021#0" expanded="true" />
+                <element signature="e#3010#3011#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -197,7 +186,7 @@
       <file leaf-file-name="beans-service.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/appcontext/beans-service.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="43" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.0">
+            <state line="16" column="34" selection-start="998" selection-end="998" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -241,11 +230,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/gg/petclinic/model/Vet.java" />
         <option value="/Hibernate QL Fragment (PetClinicDaoHibernateImpl.java:837).hql" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/appcontext/beans-service.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/appcontext/beans-dao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gg/petclinic/service/PetClinicServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gg/petclinic/dao/PetClinicDaoHibernateImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/gg/petclinic/tests/SpringTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/appcontext/beans-service.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gg/petclinic/service/PetClinicServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -607,6 +596,10 @@
               <option name="myItemId" value="petclinic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -635,6 +628,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="petclinic-spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="petclinic-spring" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="petclinic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -978,7 +997,11 @@
       <created>1368256500484</created>
       <updated>1368256500484</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="-">
+      <created>1368257255831</created>
+      <updated>1368257255831</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1028,7 +1051,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21561338" sideWeight="0.63309354" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39928058" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36690646" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36690646" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1209,22 +1232,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/appcontext/beans-service.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="43" selection-start="1193" selection-end="1193" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gg/petclinic/service/PetClinicServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="14" selection-start="899" selection-end="899" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gg/petclinic/dao/PetClinicDaoHibernateImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="70" selection-start="861" selection-end="861" vertical-scroll-proportion="0.0">
@@ -1236,9 +1243,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/gg/petclinic/tests/SpringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="139" selection-start="1653" selection-end="1653" vertical-scroll-proportion="0.8427673">
+        <state line="39" column="53" selection-start="1280" selection-end="1280" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/appcontext/beans-service.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="34" selection-start="998" selection-end="998" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gg/petclinic/service/PetClinicServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="11" selection-start="3023" selection-end="3023" vertical-scroll-proportion="0.6551724">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2624#3021#0" expanded="true" />
+            <element signature="e#3010#3011#0" expanded="true" />
           </folding>
         </state>
       </provider>
