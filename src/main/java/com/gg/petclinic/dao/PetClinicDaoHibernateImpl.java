@@ -37,32 +37,33 @@ public class PetClinicDaoHibernateImpl implements PetClinicDao {
 
     @Override
     public Collection<Owner> findOwners(String lastName) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        String qry = new String("from Owner o where o.lastName = :lastName");
+        return sessionFactory.getCurrentSession().createQuery(qry).setParameter("lastName", lastName).list();
     }
 
     @Override
     public Collection<Visit> findVisits(long petId) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null;
     }
 
     @Override
     public Collection<Person> findAllPersons() {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null;
     }
 
     @Override
     public Owner loadOwner(long id) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null;
     }
 
     @Override
     public Pet loadPet(long id) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null;
     }
 
     @Override
     public Vet loadVet(long id) {
-        return null;  //To change body of implemented methods use File | Settings | File Templates.
+        return null;
     }
 
     @Override

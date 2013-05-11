@@ -4,8 +4,10 @@ import com.gg.petclinic.service.PetClinicService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -32,5 +34,10 @@ public class PetClinicController {
         response.getWriter().write(StringUtils.collectionToCommaDelimitedString(petClinicService.getVets()));
     }
 
-
+    @RequestMapping("/findOwners/{lastName}")
+    public ModelAndView findOwners(@PathVariable("lastName") String lastName) {
+        ModelAndView mav = new ModelAndView("ownerResults");
+        mav.addObject("owners", petClinicService.findOwners(lastName));
+        return mav;
+    }
 }

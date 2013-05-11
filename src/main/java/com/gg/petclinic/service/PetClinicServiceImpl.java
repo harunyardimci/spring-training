@@ -35,13 +35,6 @@ public class PetClinicServiceImpl implements PetClinicService, InitializingBean,
     @Autowired
     private PlatformTransactionManager transactionManager;
 
-//    public PetClinicServiceImpl() {
-//    }
-//
-//    public void setPetClinicDao(PetClinicDao dao) {
-//        this.petClinicDao = dao;
-//    }
-
     @Autowired
 	public PetClinicServiceImpl(@Qualifier("petClinicDao") PetClinicDao petClinicDao) {
         System.out.println("pcs created");
