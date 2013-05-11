@@ -71,7 +71,7 @@ public class PetClinicDaoHibernateImpl implements PetClinicDao {
 
     @Override
     public void saveVet(Vet vet) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        sessionFactory.getCurrentSession().save(vet);
     }
 
     @Override

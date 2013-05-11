@@ -7,8 +7,11 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.annotation.DirtiesContext;
+import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.Collection;
 
 /**
@@ -40,12 +43,14 @@ public class SpringTest {
 
     @Test
     @DirtiesContext //Bu methoddan sonra application Context bastan yaratilir
+    @Transactional
+    @Rollback(false)
     public void testSaveVet() {
 
         Vet vet = new Vet();
-        vet.setId(123L);
-        vet.setFirstName("Harun2");
-        vet.setLastName("Yardimci2");
+        //vet.setId(123L); Auto generated
+        vet.setFirstName("Harun234");
+        vet.setLastName("Yardimci234");
 
         petClinicService.saveVet(vet);
     }
