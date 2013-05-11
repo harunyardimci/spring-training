@@ -7,6 +7,9 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
 /**
  * User: { "id": "hyardimci", "email":nosqlsolutions@gmail.com"}
  * Date: 5/11/13
@@ -21,11 +24,13 @@ public class PetClinicController {
     @RequestMapping("/vets")
     @ResponseBody
     public String getVets() {
-
         return StringUtils.collectionToCommaDelimitedString(petClinicService.getVets());
-
     }
 
+    @RequestMapping("/vets2")
+    public void getVets2(HttpServletResponse response) throws IOException {
+        response.getWriter().write(StringUtils.collectionToCommaDelimitedString(petClinicService.getVets()));
+    }
 
 
 }
