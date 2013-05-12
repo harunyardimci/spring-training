@@ -27,8 +27,8 @@ public class PetClinicServiceRestImpl implements PetClinicService {
     }
 
     @Override
-    @RequestMapping(value = "/owner")
-    public @ResponseBody Collection<Owner> findOwners(@RequestBody String lastName) {
+    @RequestMapping(value = "/owner/lastname/{lastName}")
+    public @ResponseBody Collection<Owner> findOwners(@PathVariable("lastName") String lastName) {
         return petClinicService.findOwners(lastName);
     }
 
