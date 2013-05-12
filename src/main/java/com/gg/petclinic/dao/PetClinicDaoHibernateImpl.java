@@ -1,6 +1,7 @@
 package com.gg.petclinic.dao;
 
 import com.gg.petclinic.model.*;
+import org.hibernate.Hibernate;
 import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.hibernate.Session;
@@ -63,7 +64,11 @@ public class PetClinicDaoHibernateImpl implements PetClinicDao {
 
     @Override
     public Vet loadVet(long id) {
-        return (Vet) sessionFactory.getCurrentSession().get(Vet.class, id);
+        //        Vet vet = (Vet) sessionFactory.getCurrentSession().get(Vet.class, id);
+        //        Hibernate.initialize(vet.getSpecialties());
+        //        return vet;
+        String query = new String("select new com.gg.petclinic.model.Vet(id, firstName, lastName) from Vet where id = ?");
+        return (Vet)sessionFactory.getCurrentSession().createQuery(query).setParameter(0, id).uniqueResult();
     }
 
     @Override
