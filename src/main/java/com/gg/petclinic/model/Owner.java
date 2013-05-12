@@ -36,4 +36,9 @@ public class Owner extends Person {
 	public Address getAddress() {
 		return address;
 	}
+
+    @Override
+    public void save() {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
 }

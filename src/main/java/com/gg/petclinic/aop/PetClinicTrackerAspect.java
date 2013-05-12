@@ -12,7 +12,7 @@ import org.aspectj.lang.annotation.Aspect;
 @Aspect
 public class PetClinicTrackerAspect {
 
-    @Around("execution (* com.gg..*.*(..))")
+    @Around("execution (* com.gg..service.*.*(..))")
     public Object trace(ProceedingJoinPoint pjp) throws Throwable  {
 
         try {

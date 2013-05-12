@@ -54,4 +54,19 @@ public class SpringTest {
 
         petClinicService.saveVet(vet);
     }
+
+
+    @Test
+    @DirtiesContext //Bu methoddan sonra application Context bastan yaratilir
+    @Transactional
+    @Rollback(false)
+    public void testSaveVet2() {
+
+        Vet vet = new Vet();
+        //vet.setId(123L); Auto generated
+        vet.setFirstName("Harun999");
+        vet.setLastName("Yardimci999");
+        vet.save();
+    }
+
 }

@@ -22,4 +22,9 @@
         </aop:aspect>
     </aop:config>
 
+
+    <context:spring-configured/>
+
+    <context:load-time-weaver/>
+
 </beans>

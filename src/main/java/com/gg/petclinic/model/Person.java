@@ -61,4 +61,6 @@ public abstract class Person extends BaseEntity implements Auditable {
 	public String toString() {
 		return ToStringBuilder.reflectionToString(this,ToStringStyle.SIMPLE_STYLE);
 	}
+
+    public abstract void save();
 }
